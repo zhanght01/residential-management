@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>系统登录</title>
+    <title>小区物业管理系统</title>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
     <style type=text/css>
         body {
@@ -56,23 +56,7 @@
             border-right: #ccc 1px solid;
         }
     </style>
-    <script type="text/javascript">
-        function login() {
-            var userName = $("#userName").val();
-            var password = $("#password").val();
-            var roleName = $("#roleName").val();
-            if (userName == null || userName == "") {
-                alert("用户名不能为空！");
-                return;
-            }
-            if (password == null || password == "") {
-                alert("密码不能为空！");
-                return;
-            }
-            $("#adminlogin").submit();
-
-        }
-    </script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/login.js"></script>
 </head>
 <body>
 <form id=adminlogin method=post
@@ -86,8 +70,10 @@
         </tr>
         <tr style="height: 254px">
             <td>
+                <!-- <div style="margin: 0px auto; width: 936px"><img
+                        style="display: block" >小区物业管理系统</div> -->
                 <div style="margin: 0px auto; width: 936px"><img
-                        style="display: block" src="${pageContext.request.contextPath}/images/body_03.jpg"></div>
+                        style="display: block" src="${pageContext.request.contextPath}/images/body_033.jpg"></div>  
                 <div style="background-color: #278296">
                     <div style="margin: 0px auto; width: 936px">
                         <div
@@ -143,8 +129,8 @@
 </form>
 </body>
 </html>
-<script type=text/javascript>
-    if ('${errorMsg}' != '') {
-        alert('${errorMsg}');
-    }
+<script>
+if ('${errorMsg}' != '') {
+    alert('${errorMsg}');
+}
 </script>

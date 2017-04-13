@@ -97,16 +97,17 @@
             <td width="50%"></td>
             <td valign="bottom"
                 style="font-size: 20px;color:#8B8B8B;font-family: '楷体';"
-                align="right" width="50%"><font size="3">&nbsp;&nbsp;<strong>当前管理员：</strong>${currentUser.userName
-                    }</font>【管理员】
+                align="right" width="50%"><font size="3">&nbsp;&nbsp;<strong>当前用户：</strong>${currentUser.userName
+                    }</font>
             </td>
         </tr>
     </table>
 </div>
+<!-- 中心的面板 -->
 <div region="center">
     <div class="easyui-tabs" fit="true" border="false" id="tabs">
         <div title="首页" data-options="iconCls:'icon-home'">
-            <div align="center" style="padding-top: 50px;"><a
+            <!-- <div align="center" style="padding-top: 50px;"><a
                     href="http://download.csdn.net/detail/zhenfengshisan/9765855"
                     target="_blank" style="font-size: 20px;">项目源码下载</a>
             </div>
@@ -115,10 +116,12 @@
                                                               style="font-size: 20px;">github地址</a></div>
             <div align="center" style="padding-top: 100px">
                 <font color="grey" size="10">ssm demo</font>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
+
+<!-- 左侧导航栏 -->
 <div region="west" style="width: 200px;height:500px;" title="导航菜单"
      split="true">
     <div class="easyui-accordion">

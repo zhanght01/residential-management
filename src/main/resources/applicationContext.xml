@@ -19,10 +19,10 @@
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url"
-                  value="jdbc:mysql://192.168.31.235/booktest?useUnicode=true&amp;characterEncoding=UTF-8  "/>
+                  value="jdbc:mysql://127.0.0.1/graduation_db?useUnicode=true&amp;characterEncoding=UTF-8  "/>
         <!-- 数据库账号密码 -->
         <property name="username" value="root"/>
-        <property name="password" value="123"/>
+        <property name="password" value="123456"/>
     </bean>
 
 
