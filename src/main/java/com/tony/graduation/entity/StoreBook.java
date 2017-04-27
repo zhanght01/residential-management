@@ -2,11 +2,6 @@ package com.tony.graduation.entity;
 
 import java.io.Serializable;
 
-/**
- * @author 1034683568@qq.com
- * @project_name ssm-maven
- * @date 2017-3-1
- */
 public class StoreBook implements Serializable {
     private static final long serialVersionUID = 1L;
     private String id;// 主键id

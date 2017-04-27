@@ -11,11 +11,6 @@ import com.tony.graduation.dao.StoreDao;
 import com.tony.graduation.entity.Store;
 import com.tony.graduation.service.StoreService;
 
-/**
- * @author 1034683568@qq.com
- * @project_name ssm-maven
- * @date 2017-3-1
- */
 @Service("storeService")
 public class StoreServiceImpl implements StoreService {
     private static final long serialVersionUID = 1L;

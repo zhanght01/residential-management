@@ -5,12 +5,7 @@ import java.util.Map;
 
 import com.tony.graduation.entity.Store;
 
-/**
- * @author 1034683568@qq.com
- *         project_name ssm-maven
- * @date 2015-8-17
- * @time 下午2:32:02
- */
+
 public interface StoreDao {
     /**
      * 返回相应的数据集合

@@ -5,11 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.tony.graduation.entity.StoreBook;
-/**
- * @author 1034683568@qq.com
- * @project_name ssm-maven
- * @date 2017-3-1
- */
+
 public interface StoreBookService extends Serializable {
     /**
      * 返回相应的数据集合

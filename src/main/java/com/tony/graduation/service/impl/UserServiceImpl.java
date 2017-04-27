@@ -11,11 +11,6 @@ import com.tony.graduation.dao.UserDao;
 import com.tony.graduation.entity.User;
 import com.tony.graduation.service.UserService;
 
-/**
- * @author 1034683568@qq.com
- * @project_name ssm-maven
- * @date 2017-3-1
- */
 @Service("userService")
 public class UserServiceImpl implements UserService {
 

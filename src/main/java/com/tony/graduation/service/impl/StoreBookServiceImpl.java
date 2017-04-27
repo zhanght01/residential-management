@@ -13,11 +13,6 @@ import com.tony.graduation.dao.StoreDao;
 import com.tony.graduation.entity.StoreBook;
 import com.tony.graduation.service.StoreBookService;
 
-/**
- * @author 1034683568@qq.com
- * @project_name ssm-maven
- * @date 2017-3-1
- */
 @Service("storeBookService")
 public class StoreBookServiceImpl implements StoreBookService {
     private static final long serialVersionUID = 1L;

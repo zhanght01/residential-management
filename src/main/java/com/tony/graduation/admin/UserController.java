@@ -25,11 +25,6 @@ import com.tony.graduation.util.MD5Util;
 import com.tony.graduation.util.ResponseUtil;
 import com.tony.graduation.util.StringUtil;
 
-/**
- * @author 1034683568@qq.com
- * @project_name ssm-maven
- * @date 2017-3-1
- */
 @Controller
 @RequestMapping("/user")
 public class UserController {
