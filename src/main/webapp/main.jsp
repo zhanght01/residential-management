@@ -121,12 +121,13 @@
     </div>
 </div>
 
-<!-- 左侧导航栏 -->
+<!-- 左侧导航栏 
+	暂时先不使用icon，后期加入-->
 <div region="west" style="width: 200px;height:500px;" title="导航菜单"
      split="true">
     <div class="easyui-accordion">
 
-        <div title="书架管理" data-options="iconCls:'icon-shujias'"
+       <!--  <div title="书架管理" data-options="iconCls:'icon-shujias'"
              style="padding:10px">
             <a
                     href="javascript:openTab(' 书架管理','storeManage.jsp','icon-shujia')"
@@ -141,18 +142,83 @@
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-shuben'"
                     style="width: 150px;">全部书籍</a>
+        </div> -->
+        
+        <div title="业主管理" data-options="iconCls:'icon-yezhu'"
+             style="padding:10px">
+            <a
+                    href="javascript:openTab(' 业主管理','yezhu.jsp','icon-yezhu')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-yezhu'"
+                    style="width: 150px;"> 业主管理</a>
         </div>
-        <div title="系统管理" data-options="iconCls:'icon-item'"
+        <div title="访客管理" data-options="iconCls:'icon-fangke'"
+             style="padding:10px">
+            <a
+                    href="javascript:openTab(' 访客管理','storeManage.jsp','icon-fangke')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-fangke'"
+                    style="width: 150px;"> 访客管理</a>
+        </div>
+        <div title="停车场管理" data-options="iconCls:'icon-tingchechang'"
+             style="padding:10px">
+            <a
+                    href="javascript:openTab(' 停车场管理','storeManage.jsp','icon-tingchechang')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-tingchechang'"
+                    style="width: 150px;"> 停车场管理</a>
+        </div>
+        <div title="收费管理" data-options="iconCls:'icon-shoufei'"
+             style="padding:10px">
+            <a
+                    href="javascript:openTab(' 收费管理','storeManage.jsp','icon-shoufei')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-shoufei'"
+                    style="width: 150px;"> 收费管理</a>
+        </div>
+        <div title="维修管理" data-options="iconCls:'icon-weixiu'"
+             style="padding:10px">
+            <a
+                    href="javascript:openTab(' 维修管理','storeManage.jsp','icon-weixiu')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-weixiu'"
+                    style="width: 150px;"> 维修管理</a>
+        </div>
+        <div title="资产管理" data-options="iconCls:'icon-zichan'"
+             style="padding:10px">
+            <a
+                    href="javascript:openTab(' 资产管理','storeManage.jsp','icon-zichan')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-zichan'"
+                    style="width: 150px;"> 资产管理</a>
+        </div>
+        <div title="统计查询" data-options="iconCls:'icon-tongji'"
+             style="padding:10px">
+            <a
+                    href="javascript:openTab(' 统计查询','storeManage.jsp','icon-tongji')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-tongji'"
+                    style="width: 150px;"> 统计查询</a>
+        </div>
+        <div title="用户投诉" data-options="iconCls:'icon-tousu'"
+             style="padding:10px">
+            <a
+                    href="javascript:openTab(' 用户投诉','storeManage.jsp','icon-tousu')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-tousu'"
+                    style="width: 150px;"> 用户投诉</a>
+        </div>
+        <div title="系统管理" data-options="iconCls:'icon-item1'"
              style="padding:10px;border:none;">
-            <a href="javascript:openTab(' 管理员列表','userManage.jsp','icon-lxr')"
+            <a href="javascript:openTab(' 管理员列表','userManage.jsp','icon-lxr1')"
                class="easyui-linkbutton"
-               data-options="plain:true,iconCls:'icon-lxr'" style="width: 150px;">
+               data-options="plain:true,iconCls:'icon-lxr1'" style="width: 150px;">
                 管理员列表</a> <a href="javascript:openPasswordModifyDialog()"
                              class="easyui-linkbutton"
-                             data-options="plain:true,iconCls:'icon-modifyPassword'"
+                             data-options="plain:true,iconCls:'icon-modifyPassword1'"
                              style="width: 150px;"> 修改密码</a> <a href="javascript:logout()"
                                                                 class="easyui-linkbutton"
-                                                                data-options="plain:true,iconCls:'icon-exit'"
+                                                                data-options="plain:true,iconCls:'icon-exit1'"
                                                                 style="width: 150px;">
             安全退出</a>
         </div>
