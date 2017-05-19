@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tony.graduation.dao.FangkeDao">
+    <resultMap type="Fangke" id="fangkeResult">
+        <result property="user_id" column="user_id"/>
+        <result property="name" column="name"/>
+        <result property="xingbie" column="xingbie"/>
+        <result property="visitor" column="visitor"/>
+        <result property="begin" column="begin"/>
+        <result property="end" column="end"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+    <select id="findFinish" parameterType="Map" resultMap="fangkeResult">
+        select * from visitorinformation
+        where status = 0
+    </select>
+    <select id="findUnFinish" parameterType="Map" resultMap="fangkeResult">
+        select * from visitorinformation
+        where status = 1
+    </select>
+	
+	<insert id="insertFangke" parameterType="Fangke">
+		insert into
+        visitorinformation
+        values(null,#{name},#{xingbie},#{visitor},#{begin},#{end},#{status})
+	</insert>
+	<update id="updateFangke" parameterType="Fangke">
+        update visitorinformation
+        set
+        end=#{end},
+        status=#{status}
+        where user_id=#{user_id}
+    </update>
+    <delete id="deleteFangke" parameterType="Fangke">
+    	delete from visitorinformation 
+    	where user_id=#{user_id}
+    </delete>
+</mapper> 

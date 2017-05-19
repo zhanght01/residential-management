@@ -155,10 +155,15 @@
         <div title="访客管理" data-options="iconCls:'icon-fangke'"
              style="padding:10px">
             <a
-                    href="javascript:openTab(' 访客管理','storeManage.jsp','icon-fangke')"
+                    href="javascript:openTab(' 已离开访客','fangkeFinish.jsp','icon-fangke')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-fangke'"
-                    style="width: 150px;"> 访客管理</a>
+                    style="width: 150px;"> 已离开访客</a>
+            <a
+                    href="javascript:openTab(' 还未离开访客','fangkeUnfinish.jsp','icon-fangke')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-fangke'"
+                    style="width: 150px;"> 还未离开访客</a>
         </div>
         <div title="停车场管理" data-options="iconCls:'icon-tingchechang'"
              style="padding:10px">
