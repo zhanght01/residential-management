@@ -168,26 +168,36 @@
         <div title="停车场管理" data-options="iconCls:'icon-tingchechang'"
              style="padding:10px">
             <a
-                    href="javascript:openTab(' 停车场管理','storeManage.jsp','icon-tingchechang')"
+                    href="javascript:openTab(' 已租赁停车位','parking.jsp','icon-tingchechang')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-tingchechang'"
-                    style="width: 150px;"> 停车场管理</a>
+                    style="width: 150px;"> 已租赁停车位管理</a>
+                    <a
+                    href="javascript:openTab(' 未租赁停车位','unpark.jsp','icon-tingchechang')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-tingchechang'"
+                    style="width: 150px;"> 未租赁停车位管理</a>
         </div>
-        <div title="收费管理" data-options="iconCls:'icon-shoufei'"
+       <!--  <div title="收费管理" data-options="iconCls:'icon-shoufei'"
              style="padding:10px">
             <a
                     href="javascript:openTab(' 收费管理','storeManage.jsp','icon-shoufei')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-shoufei'"
                     style="width: 150px;"> 收费管理</a>
-        </div>
+        </div> -->
         <div title="维修管理" data-options="iconCls:'icon-weixiu'"
              style="padding:10px">
             <a
-                    href="javascript:openTab(' 维修管理','storeManage.jsp','icon-weixiu')"
+                    href="javascript:openTab(' 已完成维修','weixiuing.jsp','icon-weixiu')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-weixiu'"
-                    style="width: 150px;"> 维修管理</a>
+                    style="width: 150px;"> 已完成维修</a>
+                    <a
+                    href="javascript:openTab(' 待完成维修','unweixiu.jsp','icon-weixiu')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-weixiu'"
+                    style="width: 150px;"> 待完成维修</a>
         </div>
         <div title="资产管理" data-options="iconCls:'icon-zichan'"
              style="padding:10px">
@@ -197,14 +207,14 @@
                     data-options="plain:true,iconCls:'icon-zichan'"
                     style="width: 150px;"> 资产管理</a>
         </div>
-        <div title="统计查询" data-options="iconCls:'icon-tongji'"
+       <!--  <div title="统计查询" data-options="iconCls:'icon-tongji'"
              style="padding:10px">
             <a
                     href="javascript:openTab(' 统计查询','storeManage.jsp','icon-tongji')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-tongji'"
                     style="width: 150px;"> 统计查询</a>
-        </div>
+        </div> -->
         <div title="用户投诉" data-options="iconCls:'icon-tousu'"
              style="padding:10px">
             <a
