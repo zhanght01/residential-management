@@ -202,7 +202,7 @@
         <div title="资产管理" data-options="iconCls:'icon-zichan'"
              style="padding:10px">
             <a
-                    href="javascript:openTab(' 资产管理','storeManage.jsp','icon-zichan')"
+                    href="javascript:openTab(' 资产管理','Zichan.jsp','icon-zichan')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-zichan'"
                     style="width: 150px;"> 资产管理</a>
