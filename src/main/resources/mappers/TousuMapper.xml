@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tony.graduation.dao.TousuDao">
+    <resultMap type="Tousu" id="tousuResult">
+        <result property="id" column="id"/>
+        <result property="yezhuname" column="yezhuname"/>
+        <result property="neirong" column="neirong"/>
+        <result property="phone" column="phone"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+    <select id="findAll" parameterType="Map" resultMap="tousuResult">
+        select * from tousu
+    </select>
+    <select id="findTousu" parameterType="Map" resultMap="tousuResult">
+        select * from tousu
+        where status = 1
+    </select>
+    <select id="findUnTousu" parameterType="Map" resultMap="tousuResult">
+        select * from tousu
+        where status = 0
+    </select>
+    
+    
+    <insert id="inserttousu" parameterType="Tousu">
+        insert into
+        tousu
+        values(null,#{yezhuname},#{neirong},#{phone},#{status})
+    </insert>
+    
+     <update id="updatetousu" parameterType="Tousu">
+        update tousu
+        set
+        status=#{status}
+        where id=#{id}
+    </update>
+    
+    <delete id="deletetousu" parameterType="Tousu">
+    	delete from tousu
+    	where id=#{id}
+    </delete>
+</mapper>

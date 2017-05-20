@@ -215,13 +215,18 @@
                     data-options="plain:true,iconCls:'icon-tongji'"
                     style="width: 150px;"> 统计查询</a>
         </div> -->
-        <div title="用户投诉" data-options="iconCls:'icon-tousu'"
+        <div title="业主投诉管理" data-options="iconCls:'icon-tousu'"
              style="padding:10px">
             <a
-                    href="javascript:openTab(' 用户投诉','storeManage.jsp','icon-tousu')"
+                    href="javascript:openTab(' 已处理投诉','tousuing.jsp','icon-tousu')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-tousu'"
-                    style="width: 150px;"> 用户投诉</a>
+                    style="width: 150px;"> 已处理投诉</a>
+                    <a
+                    href="javascript:openTab(' 未处理投诉','untousu.jsp','icon-tousu')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-tousu'"
+                    style="width: 150px;"> 未处理投诉</a>
         </div>
         <div title="系统管理" data-options="iconCls:'icon-item1'"
              style="padding:10px;border:none;">
