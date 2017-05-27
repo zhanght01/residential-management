@@ -49,7 +49,15 @@ public class ParkController {
         log.info("request: store/list , map: " + map.toString());
 		return null;
 	}
-	
+	/**
+	 * 空闲车位
+	 * @param page
+	 * @param rows
+	 * @param park
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping("/unpark")
 	public String findUnPark(@RequestParam(value = "page", required = false) String page,
             @RequestParam(value = "rows", required = false) String rows,

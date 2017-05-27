@@ -20,7 +20,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tony.graduation.entity.PageBean;
 import com.tony.graduation.entity.User;
+import com.tony.graduation.entity.Userid;
 import com.tony.graduation.service.UserService;
+import com.tony.graduation.service.UseridService;
 import com.tony.graduation.util.MD5Util;
 import com.tony.graduation.util.ResponseUtil;
 import com.tony.graduation.util.StringUtil;
@@ -31,6 +33,9 @@ public class UserController {
 
     @Resource
     private UserService userService;
+    
+    @Resource
+    private UseridService useridService;
     private static final Logger log = Logger.getLogger(UserController.class);// 日志文件
 
     /**
@@ -57,6 +62,10 @@ public class UserController {
         } else {
         	//通过标志位确定用户权限，跳转相应界面
         	if (resultUser.getRoleName().equals("1")){
+        		Userid userid = new Userid();
+        		userid.setId("1");
+        		userid.setNum(resultUser.getUserName());
+        		useridService.updateID(userid);
         		HttpSession session = request.getSession();
                 session.setAttribute("currentUser", resultUser);
                 MDC.put("userName", user.getUserName());

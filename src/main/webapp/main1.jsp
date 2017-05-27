@@ -128,19 +128,19 @@
     <div class="easyui-accordion">
 
         
-        <div title="个人信息" data-options="iconCls:'icon-yezhu'"
+        <!-- <div title="个人信息" data-options="iconCls:'icon-yezhu'"
              style="padding:10px">
             <a
                     href="javascript:openTab(' 个人信息','yezhu.jsp','icon-yezhu')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-yezhu'"
                     style="width: 150px;"> 个人信息</a>
-        </div>
+        </div> -->
         
         <div title="车位查询" data-options="iconCls:'icon-tingchechang'"
              style="padding:10px">
             <a
-                    href="javascript:openTab(' 空闲车位查看','parking.jsp','icon-tingchechang')"
+                    href="javascript:openTab(' 空闲车位查看','unpark2.jsp','icon-tingchechang')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-tingchechang'"
                     style="width: 150px;"> 空闲车位查看</a>

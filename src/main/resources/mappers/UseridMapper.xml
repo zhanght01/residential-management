@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tony.graduation.dao.UseridDao">
+    <resultMap type="Userid" id="UseridResult">
+        <result property="id" column="id"/>
+        <result property="num" column="num"/>
+    </resultMap>
+
+    <select id="findID" parameterType="Userid" resultMap="UseridResult">
+        select * from
+        test where id = 1
+    </select>
+
+    <update id="updateID" parameterType="User">
+        update test
+        set num = #{num}
+        where id = 1
+    </update>
+
+</mapper> 
