@@ -148,12 +148,12 @@
         <div title="收费管理" data-options="iconCls:'icon-shoufei'"
              style="padding:10px">
             <a
-                    href="javascript:openTab(' 水费查询','Shuifei.jsp','icon-shoufei')"
+                    href="javascript:openTab(' 水费查询','Shuifei3.jsp','icon-shoufei')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-shoufei'"
                     style="width: 150px;"> 水费查询</a>
             <a
-                    href="javascript:openTab(' 物业费查询','Wuyefei.jsp','icon-shoufei')"
+                    href="javascript:openTab(' 物业费查询','Wuyefei2.jsp','icon-shoufei')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-shoufei'"
                     style="width: 150px;"> 物业费查询</a>

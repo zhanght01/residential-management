@@ -14,4 +14,6 @@ public interface ShuifeiDao extends Serializable {
 	public int updateshuifei(Shuifei shuifei);
 	
 	public int deleteshuifei(Shuifei shuifei);
+	
+	public List<Shuifei> findByID(Shuifei shuifei);
 }

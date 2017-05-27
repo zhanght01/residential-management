@@ -14,4 +14,6 @@ public interface WuyefeiService extends Serializable {
 	public int updatewuyefei(Wuyefei wuyefei);
 	
 	public int deletewuyefei(Wuyefei wuyefei);
+	
+	public List<Wuyefei> findByID(Wuyefei wuyefei);
 }

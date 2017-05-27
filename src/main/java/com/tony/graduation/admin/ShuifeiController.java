@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tony.graduation.entity.PageBean;
 import com.tony.graduation.entity.Shuifei;
+import com.tony.graduation.entity.Userid;
 import com.tony.graduation.service.ShuifeiService;
+import com.tony.graduation.service.UseridService;
 import com.tony.graduation.util.ResponseUtil;
 
 import net.sf.json.JSONArray;
@@ -25,6 +27,8 @@ import net.sf.json.JSONObject;
 public class ShuifeiController {
 	@Resource
 	private ShuifeiService shuifeiService;
+	@Resource 
+	private UseridService useridService;
 	private static final Logger log = Logger.getLogger(ShuifeiController.class);
 
 	@RequestMapping("/shuifeilist")
@@ -40,6 +44,31 @@ public class ShuifeiController {
             map.put("size", pageBean.getPageSize());
         }
 		List<Shuifei> shuifeiList = shuifeiService.findAll();
+        JSONObject result = new JSONObject();
+        JSONArray jsonArray = JSONArray.fromObject(shuifeiList);
+        result.put("rows", jsonArray);
+        ResponseUtil.write(response, result);
+        log.info("request: store/list , map: " + map.toString());
+		return null;
+	}
+	
+	@RequestMapping("/findshuifeilist")
+	public String shuifeiList(@RequestParam(value = "page", required = false) String page,
+            @RequestParam(value = "rows", required = false) String rows,
+            Shuifei shuifei, HttpServletResponse response) throws Exception {
+		
+		Map<String, Object> map = new HashMap<>();
+		Userid userid = new Userid();
+		userid.setId("1");
+		if (page != null && rows != null) {
+            PageBean pageBean = new PageBean(Integer.parseInt(page),
+                    Integer.parseInt(rows));
+            map.put("start", pageBean.getStart());
+            map.put("size", pageBean.getPageSize());
+        }
+		Userid id = useridService.findID(userid);
+		shuifei.setYezhuid(id.getNum());
+		List<Shuifei> shuifeiList = shuifeiService.findByID(shuifei);
         JSONObject result = new JSONObject();
         JSONArray jsonArray = JSONArray.fromObject(shuifeiList);
         result.put("rows", jsonArray);

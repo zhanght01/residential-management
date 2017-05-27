@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tony.graduation.entity.PageBean;
+import com.tony.graduation.entity.Userid;
 import com.tony.graduation.entity.Wuyefei;
+import com.tony.graduation.service.UseridService;
 import com.tony.graduation.service.WuyefeiService;
 import com.tony.graduation.util.ResponseUtil;
 
@@ -26,6 +28,8 @@ public class WuyefeiController {
 	
 	@Resource
 	private WuyefeiService wuyefeiService;
+	@Resource
+	private UseridService useridService;
 	private static final Logger log = Logger.getLogger(WuyefeiController.class);
 
 	@RequestMapping("/wuyefeilist")
@@ -41,6 +45,31 @@ public class WuyefeiController {
             map.put("size", pageBean.getPageSize());
         }
 		List<Wuyefei> wuyefeiList = wuyefeiService.findAll();
+        JSONObject result = new JSONObject();
+        JSONArray jsonArray = JSONArray.fromObject(wuyefeiList);
+        result.put("rows", jsonArray);
+        ResponseUtil.write(response, result);
+        log.info("request: store/list , map: " + map.toString());
+		return null;
+	}
+	
+	@RequestMapping("/findwuyefeilist")
+	public String findwuyefeiList(@RequestParam(value = "page", required = false) String page,
+            @RequestParam(value = "rows", required = false) String rows,
+            Wuyefei wuyefei, HttpServletResponse response) throws Exception {
+		
+		Map<String, Object> map = new HashMap<>();
+		Userid userid = new Userid();
+		userid.setId("1");
+		if (page != null && rows != null) {
+            PageBean pageBean = new PageBean(Integer.parseInt(page),
+                    Integer.parseInt(rows));
+            map.put("start", pageBean.getStart());
+            map.put("size", pageBean.getPageSize());
+        }
+		Userid id = useridService.findID(userid);
+		wuyefei.setYezhuid(id.getNum());
+		List<Wuyefei> wuyefeiList = wuyefeiService.findByID(wuyefei);
         JSONObject result = new JSONObject();
         JSONArray jsonArray = JSONArray.fromObject(wuyefeiList);
         result.put("rows", jsonArray);

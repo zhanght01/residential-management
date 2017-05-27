@@ -35,5 +35,10 @@ public class WuyefeiServiceImpl implements WuyefeiService {
 	public int deletewuyefei(Wuyefei wuyefei) {
 		return wuyefeiDao.deletewuyefei(wuyefei);
 	}
+
+	@Override
+	public List<Wuyefei> findByID(Wuyefei wuyefei) {
+		return wuyefeiDao.findByID(wuyefei);
+	}
 	
 }

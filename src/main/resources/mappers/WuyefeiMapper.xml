@@ -17,6 +17,11 @@
         where state = 0
     </select>
     
+    <select id="findByID" parameterType="Map" resultMap="wuyefeiResult">
+        select * from wuyefei
+        where state = 0 AND yezhuid=#{yezhuid}
+    </select>
+    
     <insert id="insertwuyefei" parameterType="Wuyefei">
         insert into
         wuyefei

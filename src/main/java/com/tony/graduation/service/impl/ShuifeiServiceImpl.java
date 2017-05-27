@@ -36,4 +36,9 @@ public class ShuifeiServiceImpl implements ShuifeiService {
 		return shuifeidao.deleteshuifei(shuifei);
 	}
 
+	@Override
+	public List<Shuifei> findByID(Shuifei shuifei) {
+		return shuifeidao.findByID(shuifei);
+	}
+
 }
