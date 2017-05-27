@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tony.graduation.dao.WuyefeiDao">
+    <resultMap type="Wuyefei" id="wuyefeiResult">
+        <result property="id" column="id"/>
+        <result property="yezhuid" column="yezhuid"/>
+        <result property="yezhuxingming" column="yezhuxingming"/>
+        <result property="zongfeiming" column="zongfeiming"/>
+        <result property="mingxi" column="mingxi"/>
+        <result property="state" column="state"/>
+    </resultMap>
+
+    <select id="findAll" parameterType="Map" resultMap="wuyefeiResult">
+        select * from wuyefei
+        where state = 0
+    </select>
+    
+    <insert id="insertwuyefei" parameterType="Wuyefei">
+        insert into
+        wuyefei
+        values(null,#{yezhuid},#{yezhuxingming},#{zongfeiming},#{mingxi},#{state})
+    </insert>
+    
+     <update id="updatewuyefei" parameterType="Wuyefei">
+        update wuyefei
+        set
+        yezhuid=#{yezhuid},
+        yezhuxingming=#{yezhuxingming},
+        zongfeiming=#{zongfeiming},
+        mingxi=#{mingxi},
+        state=#{state}
+        where id=#{id}
+    </update>
+    
+    <delete id="deletewuyefei" parameterType="Wuyefei">
+    	delete from wuyefei 
+    	where id=#{id}
+    </delete>
+</mapper> 

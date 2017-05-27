@@ -127,22 +127,6 @@
      split="true">
     <div class="easyui-accordion">
 
-       <!--  <div title="书架管理" data-options="iconCls:'icon-shujias'"
-             style="padding:10px">
-            <a
-                    href="javascript:openTab(' 书架管理','storeManage.jsp','icon-shujia')"
-                    class="easyui-linkbutton"
-                    data-options="plain:true,iconCls:'icon-shujia'"
-                    style="width: 150px;"> 书架管理</a>
-        </div>
-        <div title="书籍管理" data-options="iconCls:'icon-shuji'"
-             style="padding:10px">
-            <a
-                    href="javascript:openTab(' 全部书籍','allBooksManage.jsp','icon-shuben')"
-                    class="easyui-linkbutton"
-                    data-options="plain:true,iconCls:'icon-shuben'"
-                    style="width: 150px;">全部书籍</a>
-        </div> -->
         
         <div title="业主管理" data-options="iconCls:'icon-yezhu'"
              style="padding:10px">
@@ -178,14 +162,19 @@
                     data-options="plain:true,iconCls:'icon-tingchechang'"
                     style="width: 150px;"> 未租赁停车位管理</a>
         </div>
-       <!--  <div title="收费管理" data-options="iconCls:'icon-shoufei'"
+        <div title="收费管理" data-options="iconCls:'icon-shoufei'"
              style="padding:10px">
             <a
-                    href="javascript:openTab(' 收费管理','storeManage.jsp','icon-shoufei')"
+                    href="javascript:openTab(' 水费管理','Shuifei.jsp','icon-shoufei')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-shoufei'"
-                    style="width: 150px;"> 收费管理</a>
-        </div> -->
+                    style="width: 150px;"> 水费管理</a>
+            <a
+                    href="javascript:openTab(' 物业费管理','Wuyefei.jsp','icon-shoufei')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-shoufei'"
+                    style="width: 150px;"> 物业费管理</a>
+        </div> 
         <div title="维修管理" data-options="iconCls:'icon-weixiu'"
              style="padding:10px">
             <a

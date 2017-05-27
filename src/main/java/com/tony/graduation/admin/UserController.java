@@ -55,10 +55,18 @@ public class UserController {
             request.setAttribute("errorMsg", "请认真核对账号、密码！");
             return "login";
         } else {
-            HttpSession session = request.getSession();
-            session.setAttribute("currentUser", resultUser);
-            MDC.put("userName", user.getUserName());
-            return "redirect:/main.jsp";
+        	//通过标志位确定用户权限，跳转相应界面
+        	if (resultUser.getRoleName().equals("1")){
+        		HttpSession session = request.getSession();
+                session.setAttribute("currentUser", resultUser);
+                MDC.put("userName", user.getUserName());
+                return "redirect:/main1.jsp";
+        	} else {
+        		 HttpSession session = request.getSession();
+                 session.setAttribute("currentUser", resultUser);
+                 MDC.put("userName", user.getUserName());
+                 return "redirect:/main.jsp";
+        	}
         }
     }
 
