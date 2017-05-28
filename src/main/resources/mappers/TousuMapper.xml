@@ -27,7 +27,7 @@
     <insert id="inserttousu" parameterType="Tousu">
         insert into
         tousu
-        values(null,#{yezhuname},#{neirong},#{phone},#{status})
+        values(null,#{yezhuname},#{neirong},#{status},#{phone})
     </insert>
     
      <update id="updatetousu" parameterType="Tousu">

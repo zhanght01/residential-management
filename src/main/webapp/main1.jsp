@@ -161,7 +161,7 @@
         <div title="业主报修" data-options="iconCls:'icon-weixiu'"
              style="padding:10px">
             <a
-                    href="javascript:openTab(' 报修','weixiuing.jsp','icon-weixiu')"
+                    href="javascript:openTab(' 报修','Weixiu2.jsp','icon-weixiu')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-weixiu'"
                     style="width: 150px;"> 报修</a>
@@ -171,7 +171,7 @@
         <div title="投诉管理" data-options="iconCls:'icon-tousu'"
              style="padding:10px">
             <a
-                    href="javascript:openTab(' 业主投诉','tousuing.jsp','icon-tousu')"
+                    href="javascript:openTab(' 业主投诉','Tousu2.jsp','icon-tousu')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-tousu'"
                     style="width: 150px;"> 业主投诉</a>
